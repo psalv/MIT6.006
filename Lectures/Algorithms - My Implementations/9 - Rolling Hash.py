@@ -130,17 +130,11 @@ class RollingHash(object):
 
 def test():
     t = RollingHash()
-    t.setSubstring('hello')
-    t.loadText('the is a test to find hello. There should be two instances of hello.', False)
+    t.setSubstring('class=')
+    t.loadText('    <div class="testClass1 testClass2">', False)
     t.findInstances()
 
-# test()
-
-
-
-
-
-
+test()
 
 
 

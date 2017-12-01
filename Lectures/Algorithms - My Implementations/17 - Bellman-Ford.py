@@ -2,8 +2,9 @@
 
 #The fastest run time for Dijkstra is O(VlgV + E) accomplished using a Fibonacci heap.
 #In this implementation a min-heap will be used achieving O(VlgV + ElgV), where V is num vertices, E is num edges.
+import random
 
-
+x = random.ra
 class HashTable(object):
     """Creates a has table to attempt to create a data structure with O(1) insertion, deletion, and look up.
     Methods have been altered for the values of a graph, to be used as  look up table for vertices (and possibly edges).."""
@@ -98,6 +99,7 @@ class HashTable(object):
             self.m /= 2
             self._updateM()
 
+
 class Vertex(object):
     """Uses object oriented programming to store an adjacency list in neighbors for each vertex.
     Modified for use in a shortest path algorithm storing d (the best current weight value to get to this vertex) and pi (it's predecessor)."""
@@ -121,6 +123,10 @@ class Vertex(object):
 
     def __repr__(self):
         return str(self.pos)
+
+    def __str__(self):
+        return str(self.pos)
+
 
 class Digraph(object):
     """A undirected graph, storing vertices in a hash table for fast look up.
@@ -159,6 +165,7 @@ class Digraph(object):
     def find(self, n):
         return self.nodes.find(n)
 
+
 def relax(u, edge):
     """Relaxes a neighbor of the the vertex u."""
 
@@ -196,6 +203,7 @@ def BellmanFord(graph, start):
 def testBellmanFord():
     graph = Digraph('test1')
     BellmanFord(graph, "s")
+
 
 testBellmanFord()
 

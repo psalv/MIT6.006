@@ -178,7 +178,7 @@ def DFSvisit(s, parent, finish):
             raise ValueError("Topological sort requires an acyclic graph.")
 
         if v not in parent:
-            parent[v] = s
+            pairent[v] = s
             DFSvisit(v, parent, finish)
 
             if finish != None:

@@ -282,7 +282,7 @@ def Dijkstra(graph, start):
 
             #Min-heapifies the edge and all of the parents to maintain the min-heap property.
             while edge.MHP != 0:
-                try:2
+                try:
                     Q.minHeapify(Q.parent(edge.MHP))
                     edge = Q.array[Q.parent(edge.MHP)]
                 except TypeError:
